@@ -16,33 +16,15 @@
 <div class="container">
   <h1>Verify Your Age 😈</h1>
 
-  <!-- 18+ Button -->
-  <button id="plus18">18+</button>
+  <a href="valentine-main.html">
+    <button>18+</button>
+  </a>
 
-  <!-- 18- Button -->
-  <button id="minus18">18-</button>
+  <button onclick="alert('You lying piece of shit!!!! Choose Correct!')">
+    18-
+  </button>
 
 </div>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    const plusBtn = document.getElementById("plus18");
-    const minusBtn = document.getElementById("minus18");
-
-    let minusClicks = 0;
-
-    minusBtn.addEventListener("click", function () {
-
-        minusClicks++;
-
-        // Play sound
-        const meow = new Audio("assets/meow.mp3");
-        meow.play();
-
-        // Make 18+ grow
-        plusBtn.style.transform = "scale(" + (1 + minusClicks * 0.4) + ")";
-        plusBtn.style.transition = "0.3s";
-
-        // Move 18- randomly
-        minusBtn.style.position = "absolute";
+</body>
+</html>

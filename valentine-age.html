@@ -4,7 +4,8 @@
   <title>Valentine Age</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-image:url('assets/valentine.jpg');">
+
+<body style="background-image:url('assets/valentine.jpg'); background-size:cover; background-position:center;">
 
 <div class="overlay"></div>
 
@@ -15,41 +16,33 @@
 <div class="container">
   <h1>Verify Your Age 😈</h1>
 
-  <a href="valentine-main.html">
-    <button>18+</button>
-  </a>
+  <!-- 18+ Button -->
+  <button id="plus18">18+</button>
 
-  <button onclick="alert('You lying piece of shit!!!! Choose Correct!')">
-    18-
-  </button>
+  <!-- 18- Button -->
+  <button id="minus18">18-</button>
+
 </div>
 
-<script src="script.js">
-  let minusClicks = 0;
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-const plusBtn = document.getElementById("btn18plus");
-const minusBtn = document.getElementById("btn18minus");
+    const plusBtn = document.getElementById("plus18");
+    const minusBtn = document.getElementById("minus18");
 
-if (plusBtn && minusBtn) {
+    let minusClicks = 0;
 
     minusBtn.addEventListener("click", function () {
+
         minusClicks++;
 
-        // Increase 18+ size
-        plusBtn.style.transform = "scale(" + (1 + minusClicks * 0.3) + ")";
+        // Play sound
+        const meow = new Audio("assets/meow.mp3");
+        meow.play();
 
-        // Move -18 randomly
+        // Make 18+ grow
+        plusBtn.style.transform = "scale(" + (1 + minusClicks * 0.4) + ")";
+        plusBtn.style.transition = "0.3s";
+
+        // Move 18- randomly
         minusBtn.style.position = "absolute";
-        minusBtn.style.left = Math.random() * 80 + "%";
-        minusBtn.style.top = Math.random() * 80 + "%";
-
-        if (minusClicks >= 5) {
-            minusBtn.remove();
-        }
-    });
-
-}
-
-</script>
-</body>
-</html>

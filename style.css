@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: Arial, sans-serif;
   height: 100vh;
   overflow: hidden;
   background-size: cover;
@@ -17,7 +17,6 @@ body {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(4px);
 }
 
 .container {
@@ -51,8 +50,8 @@ button {
   padding: 12px 25px;
   margin: 10px;
   border-radius: 40px;
-  border: 1px solid rgba(255,255,255,0.4);
-  background: rgba(255,255,255,0.15);
+  border: none;
+  background: rgba(255,255,255,0.2);
   color: white;
   cursor: pointer;
   transition: 0.3s;
@@ -60,7 +59,7 @@ button {
 
 button:hover {
   transform: scale(1.1);
-  background: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.4);
 }
 
 .home-btn {
@@ -84,4 +83,3 @@ button:hover {
     opacity: 0;
   }
 }
-

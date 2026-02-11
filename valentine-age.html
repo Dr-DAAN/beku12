@@ -24,6 +24,32 @@
   </button>
 </div>
 
-<script src="script.js"></script>
+<script src="script.js">
+  let minusClicks = 0;
+
+const plusBtn = document.getElementById("btn18plus");
+const minusBtn = document.getElementById("btn18minus");
+
+if (plusBtn && minusBtn) {
+
+    minusBtn.addEventListener("click", function () {
+        minusClicks++;
+
+        // Increase 18+ size
+        plusBtn.style.transform = "scale(" + (1 + minusClicks * 0.3) + ")";
+
+        // Move -18 randomly
+        minusBtn.style.position = "absolute";
+        minusBtn.style.left = Math.random() * 80 + "%";
+        minusBtn.style.top = Math.random() * 80 + "%";
+
+        if (minusClicks >= 5) {
+            minusBtn.remove();
+        }
+    });
+
+}
+
+</script>
 </body>
 </html>

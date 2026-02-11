@@ -1,11 +1,9 @@
-// Meow Sound
 function playMeow() {
   const audio = new Audio("assets/meow.mp3");
-  audio.volume = 0.4;
+  audio.volume = 0.5;
   audio.play();
 }
 
-// Heart Burst
 function heartBurst(count = 8) {
   for (let i = 0; i < count; i++) {
     const heart = document.createElement("div");
@@ -22,4 +20,3 @@ document.addEventListener("click", () => {
   playMeow();
   heartBurst(10);
 });
-
